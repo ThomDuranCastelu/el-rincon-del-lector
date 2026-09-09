@@ -1,0 +1,40 @@
+@use "variables" as *;
+@use "sass:list";
+
+// ==========================================================================
+// MIXINS
+// ==========================================================================
+
+// Tarjeta blanca con borde de acento (se repetía igual en 5 clases distintas)
+@mixin tarjeta($padding: $espaciado-lg) {
+    background-color: $color-blanco;
+    border: 1px solid $color-acento;
+    border-radius: $radio-borde;
+    padding: $padding;
+}
+
+// Flex container con parámetros por defecto
+@mixin flex($justify: flex-start, $align: stretch, $gap: 0, $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
+
+// Transición corta y suave (se repetía "0.2s ease" en todos lados)
+// Acepta una o varias propiedades: @include transicion(color); @include transicion(color, background-color);
+@mixin transicion($props...) {
+    $lista: ();
+    @each $prop in $props {
+        $lista: list.append($lista, $prop 0.2s ease, comma);
+    }
+    transition: $lista;
+}
+
+// Breakpoint único de escritorio (mismo valor en todos los @media)
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}

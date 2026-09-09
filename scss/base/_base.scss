@@ -1,0 +1,40 @@
+@use "../utilities/variables" as *;
+
+// ==========================================================================
+// RESET DEL BOX MODEL
+// ==========================================================================
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// ==========================================================================
+// ESTILOS BASE GLOBALES
+// ==========================================================================
+
+body {
+    background-color: $color-secundario;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $color-primario;
+    font-family: $fuente-cuerpo;
+}
+
+main p {
+    margin-bottom: $espaciado-md;
+}
+
+.contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: $espaciado-xl $espaciado-lg;
+}
+
+// Párrafos descriptivos largos (se usaban con el mismo estilo en varias páginas)
+.descripcion-libreria,
+.descripcion-producto {
+    font-family: $fuente-cuerpo;
+    max-width: 70ch;
+}

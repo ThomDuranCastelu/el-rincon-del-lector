@@ -1,0 +1,34 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================================================
+// CAROUSEL (Bootstrap personalizado)
+// ==========================================================================
+
+.carousel-custom {
+    border-radius: $radio-borde;
+    overflow: hidden;
+    border: 1px solid $color-acento;
+
+    .carousel-item img {
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: $color-acento;
+        border-radius: 50%;
+        padding: $espaciado-md;
+        @include transicion(background-color);
+    }
+
+    .carousel-control-prev:hover .carousel-control-prev-icon,
+    .carousel-control-next:hover .carousel-control-next-icon {
+        background-color: $color-primario;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        background-color: $color-acento;
+    }
+}

@@ -1,0 +1,24 @@
+// ==========================================================================
+// MAIN.SCSS — único punto de entrada de la compilación
+// ==========================================================================
+
+// Utilities (variables y mixins, deben ir primero)
+@use "utilities/variables" as *;
+@use "utilities/mixins" as *;
+
+// Base (reset, tipografía, estilos globales)
+@use "base/tipografia";
+@use "base/base";
+
+// Layout (header, nav, footer, grids de página)
+@use "layout/header";
+@use "layout/nav";
+@use "layout/footer";
+@use "layout/grid";
+
+// Components (piezas reutilizables)
+@use "components/cards";
+@use "components/buttons";
+@use "components/forms";
+@use "components/carousel";
+@use "components/misc";

@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+.titulo-principal {
+  font-family: "Lobster Two", sans-serif;
+  color: #705757;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.eslogan {
+  font-family: "Lora", serif;
+  font-style: italic;
+  color: #705757;
+  font-size: 1.1rem;
+}
+
+.titulo-secundario {
+  font-family: "Lobster Two", sans-serif;
+  color: #705757;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #B5651D;
+  padding-bottom: 0.3rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.titulo-terciario {
+  font-family: "Lobster Two", sans-serif;
+  color: #705757;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F9F9EE;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #705757;
+  font-family: "Lora", serif;
+}
+
+main p {
+  margin-bottom: 1rem;
+}
+
+.contenido {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.descripcion-libreria,
+.descripcion-producto {
+  font-family: "Lora", serif;
+  max-width: 70ch;
+}
+
+.encabezado {
+  padding: 1.5rem 1.5rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid #B5651D;
+}
+.encabezado img:not(.logo) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  border-radius: 20%;
+  border: 2px solid #B5651D;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  padding: 0;
+}
+
+.nav-link {
+  font-family: "Lora", serif;
+  color: #705757 !important;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.nav-link:hover, .nav-link:focus {
+  background-color: #B5651D;
+  color: #F9F9EE !important;
+}
+.nav-link:active {
+  background-color: #705757;
+  color: #F9F9EE !important;
+}
+
+.navbar-toggler {
+  border-color: #B5651D;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(112, 87, 87, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.pie-pagina {
+  background-color: #705757;
+  color: #F9F9EE;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+.pie-pagina p {
+  color: #F9F9EE;
+  margin-top: 0.3rem;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  margin-top: 1rem;
+}
+.redes-sociales a {
+  color: #F9F9EE;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #B5651D;
+  transition: color 0.2s ease;
+}
+.redes-sociales a:hover {
+  color: #F9F9EE;
+  border-bottom-color: #F9F9EE;
+}
+.redes-sociales a:focus, .redes-sociales a:active {
+  color: #B5651D;
+  outline: 2px solid #B5651D;
+  outline-offset: 2px;
+}
+
+.contenido-index {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "texto" "galeria" "destacado";
+  gap: 2rem;
+}
+.contenido-index .descripcion-libreria {
+  grid-area: texto;
+}
+.contenido-index .lugar-destacado {
+  grid-area: destacado;
+}
+@media (min-width: 1024px) {
+  .contenido-index {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "texto destacado" "galeria galeria";
+    align-items: start;
+  }
+}
+
+.galeria {
+  grid-area: galeria;
+}
+
+.contenido-catalogo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "titulo" "galeria" "destacados" "generos" "recomendado";
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .contenido-catalogo {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "titulo     titulo" "galeria    galeria" "destacados recomendado" "generos    recomendado";
+  }
+}
+
+.catalogo-intro {
+  grid-area: titulo;
+}
+
+.galeria-catalogo {
+  grid-area: galeria;
+}
+
+.seccion-destacados {
+  grid-area: destacados;
+}
+
+.seccion-generos {
+  grid-area: generos;
+}
+
+.libro-recomendado {
+  grid-area: recomendado;
+}
+
+.lugar-destacado,
+.marketing,
+.productos-destacados,
+.frase-destacada,
+.valores {
+  background-color: #FFFFFF;
+  border: 1px solid #B5651D;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.seccion-destacados {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.seccion-destacados h2,
+.seccion-destacados h3 {
+  flex-basis: 100%;
+}
+
+.libro {
+  background-color: #FFFFFF;
+  border: 1px solid #B5651D;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 160px;
+  text-align: center;
+  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.libro img {
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  max-width: 100%;
+  height: auto;
+}
+.libro h3 {
+  min-height: 3rem;
+  font-size: 1rem;
+}
+.libro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(112, 87, 87, 0.3);
+}
+
+.genero ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+}
+.genero li {
+  background-color: #FFFFFF;
+  border: 1px solid #B5651D;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 160px;
+  text-align: center;
+  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+  min-height: 3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.genero li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(112, 87, 87, 0.3);
+}
+.genero img {
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+}
+
+.libro-recomendado {
+  background-color: #705757;
+  color: #F9F9EE;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.libro-recomendado .titulo-terciario,
+.libro-recomendado .descripcion-libro {
+  color: #F9F9EE;
+}
+
+.btn-enviar {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 1.1rem;
+  background-color: #705757;
+  color: #F9F9EE;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.btn-enviar:hover {
+  background-color: #B5651D;
+}
+.btn-enviar:active {
+  background-color: #705757;
+  transform: scale(0.97);
+}
+
+form {
+  background-color: #FFFFFF;
+  border: 1px solid #B5651D;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  color: #705757;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  font-family: "Lora", serif;
+  padding: 0.6rem;
+  border: 1px solid #B5651D;
+  border-radius: 4px;
+  background-color: #F9F9EE;
+  color: #705757;
+}
+
+.carousel-custom {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #B5651D;
+}
+.carousel-custom .carousel-item img {
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carousel-custom .carousel-control-prev-icon,
+.carousel-custom .carousel-control-next-icon {
+  background-color: #B5651D;
+  border-radius: 50%;
+  padding: 1rem;
+  transition: background-color 0.2s ease;
+}
+.carousel-custom .carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-custom .carousel-control-next:hover .carousel-control-next-icon {
+  background-color: #705757;
+}
+.carousel-custom .carousel-indicators [data-bs-target] {
+  background-color: #B5651D;
+}
+
+.lista-simple {
+  list-style: none;
+  padding-left: 0;
+}
+.lista-simple li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0dcc8;
+}
+.lista-simple li:last-child {
+  border-bottom: none;
+}
+
+.frase {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #705757;
+  border-left: 4px solid #B5651D;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.imagen-principal {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+  border: 2px solid #B5651D;
+}
+
+.descripcion-local {
+  font-family: "Lora", serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #705757;
+  margin-top: 0.5rem;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,28 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================================================
+// BOTONES
+// ==========================================================================
+
+.btn-enviar {
+    font-family: $fuente-titulos;
+    font-size: 1.1rem;
+    background-color: $color-primario;
+    color: $color-secundario;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem;
+    margin-top: $espaciado-lg;
+    cursor: pointer;
+    @include transicion(background-color);
+
+    &:hover {
+        background-color: $color-acento;
+    }
+
+    &:active {
+        background-color: $color-primario;
+        transform: scale(0.97);
+    }
+}

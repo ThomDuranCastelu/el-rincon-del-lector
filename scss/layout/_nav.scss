@@ -1,0 +1,43 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================================================
+// NAVBAR (Bootstrap personalizado)
+// ==========================================================================
+
+.navbar {
+    padding: 0;
+}
+
+.nav-container {
+    @include flex(space-between, center);
+    padding: 0;
+}
+
+.nav-link {
+    font-family: $fuente-cuerpo;
+    color: $color-primario !important;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    @include transicion(background-color, color);
+
+    &:hover,
+    &:focus {
+        background-color: $color-acento;
+        color: $color-secundario !important;
+    }
+
+    &:active {
+        background-color: $color-primario;
+        color: $color-secundario !important;
+    }
+}
+
+.navbar-toggler {
+    border-color: $color-acento;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(112, 87, 87, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

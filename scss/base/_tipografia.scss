@@ -1,0 +1,42 @@
+@use "../utilities/variables" as *;
+
+// ==========================================================================
+// FUENTES (Google Fonts)
+// ==========================================================================
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+// ==========================================================================
+// TIPOGRAFÍA
+// ==========================================================================
+
+.titulo-principal {
+    font-family: $fuente-titulos;
+    color: $color-primario;
+    font-size: 2.5rem;
+    margin-bottom: $espaciado-sm;
+}
+
+.eslogan {
+    font-family: $fuente-cuerpo;
+    font-style: italic;
+    color: $color-primario;
+    font-size: 1.1rem;
+}
+
+.titulo-secundario {
+    font-family: $fuente-titulos;
+    color: $color-primario;
+    font-size: 1.8rem;
+    border-bottom: 2px solid $color-acento;
+    padding-bottom: 0.3rem;
+    display: inline-block;
+    margin-bottom: $espaciado-md;
+}
+
+.titulo-terciario {
+    font-family: $fuente-titulos;
+    color: $color-primario;
+    font-size: 1.3rem;
+    margin-bottom: $espaciado-sm;
+}

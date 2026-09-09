@@ -1,0 +1,44 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================================================
+// FOOTER
+// ==========================================================================
+
+.pie-pagina {
+    background-color: $color-primario;
+    color: $color-secundario;
+    text-align: center;
+    padding: $espaciado-xl $espaciado-md;
+    margin-top: $espaciado-xl;
+
+    p {
+        color: $color-secundario;
+        margin-top: 0.3rem;
+    }
+}
+
+.redes-sociales {
+    @include flex(center, center, $espaciado-lg);
+    margin-top: $espaciado-md;
+
+    a {
+        color: $color-secundario;
+        text-decoration: none;
+        font-weight: 600;
+        border-bottom: 1px solid $color-acento;
+        @include transicion(color);
+
+        &:hover {
+            color: $color-secundario;
+            border-bottom-color: $color-secundario;
+        }
+
+        &:focus,
+        &:active {
+            color: $color-acento;
+            outline: 2px solid $color-acento;
+            outline-offset: 2px;
+        }
+    }
+}

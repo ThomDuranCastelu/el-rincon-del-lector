@@ -1,0 +1,32 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================================================
+// FORMULARIO
+// ==========================================================================
+
+form {
+    @include tarjeta;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    font-family: $fuente-cuerpo;
+    font-weight: 600;
+    color: $color-primario;
+    margin-top: $espaciado-md;
+    margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+    font-family: $fuente-cuerpo;
+    padding: 0.6rem;
+    border: 1px solid $color-acento;
+    border-radius: 4px;
+    background-color: $color-secundario;
+    color: $color-primario;
+}

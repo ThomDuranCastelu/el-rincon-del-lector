@@ -1,0 +1,22 @@
+@use "../utilities/variables" as *;
+
+// ==========================================================================
+// HEADER
+// ==========================================================================
+
+.encabezado {
+    padding: $espaciado-lg $espaciado-lg $espaciado-xl;
+    text-align: center;
+    border-bottom: 2px solid $color-acento;
+
+    // Cualquier imagen grande del header que no sea el logo (ej: foto de la librería)
+    img:not(.logo) {
+        margin-top: $espaciado-md;
+        margin-bottom: $espaciado-md;
+    }
+}
+
+.logo {
+    border-radius: 20%;
+    border: 2px solid $color-acento;
+}

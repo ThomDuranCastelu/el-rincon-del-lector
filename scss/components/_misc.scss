@@ -1,0 +1,51 @@
+@use "../utilities/variables" as *;
+
+// ==========================================================================
+// LISTA SIMPLE (index, inicio)
+// ==========================================================================
+
+.lista-simple {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        padding: $espaciado-sm 0;
+        border-bottom: 1px solid $color-borde-lista;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+// ==========================================================================
+// CITA DESTACADA (inicio, sobre-nosotros)
+// ==========================================================================
+
+.frase {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: $color-primario;
+    border-left: 4px solid $color-acento;
+    padding-left: $espaciado-md;
+    margin: $espaciado-md 0;
+}
+
+// ==========================================================================
+// SOBRE NOSOTROS: imagen principal y pie de figura
+// ==========================================================================
+
+.imagen-principal {
+    display: block;
+    margin: $espaciado-md auto;
+    border-radius: 6px;
+    border: 2px solid $color-acento;
+}
+
+.descripcion-local {
+    font-family: $fuente-cuerpo;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: $color-primario;
+    margin-top: $espaciado-sm;
+}

@@ -1,0 +1,111 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================================================
+// TARJETAS "CONTENEDOR" (mismo estilo de card blanca en 5 secciones distintas)
+// ==========================================================================
+
+.lugar-destacado,
+.marketing,
+.productos-destacados,
+.frase-destacada,
+.valores {
+    @include tarjeta;
+    margin-bottom: $espaciado-xl;
+}
+
+// ==========================================================================
+// SECCIÓN "LIBROS DESTACADOS" (catálogo)
+// ==========================================================================
+
+.seccion-destacados {
+    @include flex(flex-start, stretch, $espaciado-md, wrap);
+
+    h2,
+    h3 {
+        flex-basis: 100%;
+    }
+}
+
+// ==========================================================================
+// TARJETA DE LIBRO
+// ==========================================================================
+
+.libro {
+    @include tarjeta($espaciado-md);
+    width: 160px;
+    text-align: center;
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    @include transicion(transform, box-shadow);
+
+    img {
+        border-radius: 4px;
+        margin-bottom: $espaciado-sm;
+        max-width: 100%;
+        height: auto;
+    }
+
+    h3 {
+        min-height: 3rem;
+        font-size: 1rem;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 10px rgba($color-primario, 0.3);
+    }
+}
+
+// ==========================================================================
+// BLOQUE DE GÉNERO (catálogo)
+// ==========================================================================
+
+.genero {
+    ul {
+        @include flex(flex-start, stretch, $espaciado-md, wrap);
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li {
+        @include tarjeta($espaciado-md);
+        width: 160px;
+        text-align: center;
+        vertical-align: top;
+        display: flex;
+        flex-direction: column;
+        min-height: 3rem;
+        @include transicion(transform, box-shadow);
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 10px rgba($color-primario, 0.3);
+        }
+    }
+
+    img {
+        display: block;
+        margin: $espaciado-sm auto 0;
+        border-radius: 4px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+// ==========================================================================
+// LIBRO RECOMENDADO (variante oscura, no usa el mixin de tarjeta blanca)
+// ==========================================================================
+
+.libro-recomendado {
+    background-color: $color-primario;
+    color: $color-secundario;
+    border-radius: $radio-borde;
+    padding: $espaciado-lg;
+
+    .titulo-terciario,
+    .descripcion-libro {
+        color: $color-secundario;
+    }
+}
