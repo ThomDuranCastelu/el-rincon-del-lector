@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand" href="../index.html">
+                    <img class="logo" src="../assets/logo_libreria.png" alt="Logotipo de la libreria" width="60">
+                </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Pagina principal</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="titulo-principal">Bienvenidos a el rincon del lector</h1>
+</header>
+
+<main class="contenido contenido-catalogo">
+    <div class="catalogo-intro">
+        <h2 class="titulo-secundario">Nuestro catalogo</h2>
+        <p class="descripcion-libreria">
+            Contamos con una amplia variedad de libros para todos los gustos y edades. 
+        </p>
+    </div>
+    
+    <section class="galeria-catalogo">
+    <h2 class="titulo-secundario">Libros del mes</h2>
+    <div id="carouselLibros" class="carousel slide carousel-custom" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselLibros" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselLibros" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselLibros" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../assets/libros/1984.png" class="d-block w-100" alt="Portada de 1984">
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/libros/el_hobbit.png" class="d-block w-100" alt="Portada de El Hobbit">
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/libros/sapiens.png" class="d-block w-100" alt="Portada de Sapiens">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLibros" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselLibros" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+</section>
+
+    <section class="seccion-destacados">
+        <h2 class="titulo-secundario">Libros destacados</h2>
+        
+    <h3 class="titulo-terciario">Literatura clasica</h3>
+
+    <article class="libro">
+    <h3 class="titulo-terciario">Don quijote de la mancha</h3>
+        <img src="../assets/libros/don_quijote_de_la_mancha.png"
+            alt="Portada de Don Quijote"
+            width="150">
+
+        
+    </article>
+
+    <article class="libro">
+        <h3 class="titulo-terciario">Orgullo y prejuicio</h3>
+            <img src="../assets/libros/orgullo_y_prejuicio.png" 
+                alt="Portada de Orgullo y Prejuicio" 
+                width="150">
+            
+    </article>
+
+
+    <article class="libro">
+        <h3 class="titulo-terciario">1984</h3>
+            <img src="../assets/libros/1984.png"
+                alt="Portada de 1984"
+                width="150">
+    </article>
+
+    <article class="libro">
+        <h3 class="titulo-terciario">Crimen y castigo</h3>
+            <img src="../assets/libros/crimen_y_castigo.png"
+                alt="Portada de Crimen y Castigo"
+                width="150">
+        </article>
+
+    </section>
+
+    <section class="seccion-generos">
+        <h2 class="titulo-secundario">Géneros</h2>
+    <article class="genero">
+    
+        <h3 class="titulo-terciario">Fantasia</h3>
+        <ul>
+            <li>El señor de los anillos
+            <img src="../assets/libros/el_señor_de_los_anillos.png"
+                alt="Portada de El Señor de los Anillos"
+                width="150"> </li>
+            <li>Harry Potter y la piedra filosofal
+            <img src="../assets/libros/harry_potter_y_la_piedra_filosofal.png"
+                alt="Portada de Harry Potter y la Piedra Filosofal"
+                width="150"> </li>
+            <li>Las cronicas de Narnia: el leon, la bruja y el ropero.
+            <img src="../assets/libros/las_cronicas_de_narnia.png"
+                alt="Portada de Las Crónicas de Narnia"
+                width="150"> </li>
+            <li>El hobbit
+            <img src="../assets/libros/el_hobbit.png"
+                alt="Portada de El Hobbit"
+                width="150"> </li>
+        </ul>
+
+        </article>
+
+    <article class="genero">
+
+    <h3 class="titulo-terciario">Historia</h3>
+
+        <ul>
+            <li>Word war II
+                <img src="../assets/libros/word_war_II.png"
+                    alt="Portada de Word War II"
+                    width="150"> </li>
+                
+
+            <li>La revolucion francesa
+                <img src="../assets/libros/la_revolucion_francesa.png"
+                    alt="Portada de La Revolución Francesa"
+                    width="150"> </li>
+
+            <li>Historia de la Argentina
+                <img src="../assets/libros/historia_de_la_argentina.png"
+                    alt="Portada de Historia de la Argentina"
+                    width="150"> </li>
+
+            <li>Sapiens
+                <img src="../assets/libros/sapiens.png"
+                    alt="Portada de Sapiens"
+                    width="150"> </li>
+
+
+        </ul>
+</article>
+
+
+<article class="genero">
+
+    <h3 class="titulo-terciario">Desarrollo personal</h3>
+        <ul>
+            <li>Los siete habitos de la gente altamente efectiva
+                <img src="../assets/libros/los_siete_habitos_de_la_gente_efectiva.png"
+                    alt="Portada de Los Siete Hábitos de la Gente Altamente Efectiva"
+                    width="150"> </li>
+
+            <li>Como ganar amigos e influir sobre las personas
+                <img src="../assets/libros/como_ganar_amigos_e_influir_sobre_las_personas.png"
+                    alt="Portada de Cómo Ganar Amigos e Influir sobre las Personas"
+                    width="150"> </li>
+
+            <li>El poder del ahora
+                <img src="../assets/libros/el_poder_del_ahora.png"
+                    alt="Portada de El Poder del Ahora"
+                    width="150"> </li>
+
+            <li>Atomic habits
+                <img src="../assets/libros/atomic_habits.png"
+                    alt="Portada de Atomic Habits"
+                    width="150"> </li>
+        </ul>  
+        </article>
+    </section>
+
+    <aside class="libro-recomendado">
+        <h3 class="titulo-terciario">Libro recomendado</h3>
+        <p class="descripcion-libro">"El señor de los anillos" continua siendo una de las obras mas influyentes de la literatura fantastica.</p>
+
+    </aside>
+</main>
+
+
+<footer class="pie-pagina">
+        <p>&copy; 2026 El rincón del lector. Todos los derechos reservados.</p>
+        <p>Contacto: +54 9 11 2345-6789</p>
+        <nav class="redes-sociales">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+    </nav>
+
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
