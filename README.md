@@ -4,7 +4,8 @@ Sitio web de una librería, desarrollado como proyecto integrador del curso de P
 
 ## 🔗 Links
 
-- **Sitio desplegado:** [https://thomdurancastelu.github.io/el-rincon-del-lector/](https://thomdurancastelu.github.io/el-rincon-del-lector/)
+- **Sitio desplegado (Netlify):** [https://el-rincon-del-lector-coderhouse.netlify.app](https://el-rincon-del-lector-coderhouse.netlify.app)
+- **Sitio desplegado (GitHub Pages):** [https://thomdurancastelu.github.io/el-rincon-del-lector/](https://thomdurancastelu.github.io/el-rincon-del-lector/)
 - **Repositorio:** [https://github.com/ThomDuranCastelu/el-rincon-del-lector](https://github.com/ThomDuranCastelu/el-rincon-del-lector)
 
 ## 📄 Páginas
@@ -18,20 +19,23 @@ Sitio web de una librería, desarrollado como proyecto integrador del curso de P
 ## 🛠️ Tecnologías
 
 - HTML5 semántico
-- SCSS (variables, mixins, nesting, partials) compilado a CSS
-- CSS3 (Flexbox, Grid, media queries)
+- SCSS (variables, mixins con parámetros, nesting, `@extend`, partials) compilado a CSS
+- CSS3 (Flexbox, Grid, media queries, `@keyframes`)
 - [Bootstrap 5](https://getbootstrap.com/) (navbar responsiva y carousel)
+- [AOS](https://michalsnik.github.io/aos/) (Animate On Scroll)
 - Google Fonts (Lobster Two + Lora)
+- Desplegado en Netlify
 
 ## ✨ Funcionalidades
 
-- Diseño mobile-first, responsivo en mobile / tablet / desktop
-- Navbar de Bootstrap con menú hamburguesa en mobile
+- Diseño mobile-first, 100% responsivo en mobile / tablet / desktop (breakpoint en 1024px)
+- Navbar de Bootstrap con menú hamburguesa en mobile, estilada con la paleta propia
 - Carousel de imágenes en `index.html` y `catalogo.html`
-- Layout con CSS Grid (`grid-template-areas`) en las secciones principales
-- Estados interactivos (`:hover`, `:focus`, `:active`) en links, botones y tarjetas
-- Paleta de colores y tipografía propias, aplicadas sobre los componentes de Bootstrap
-- Arquitectura SCSS modular (variables, mixins y partials organizados por `base/`, `layout/` y `components/`)
+- Layout con CSS Grid (`grid-template-areas`) en las 5 páginas
+- Animaciones nativas con `@keyframes` (aparición del título, logo flotante) y estados interactivos (`:hover`, `:focus`, `:active`) con `transition`
+- Animaciones al hacer scroll con la librería AOS
+- Arquitectura SCSS modular (variables, mixins con parámetros, `@extend`, partials organizados por `base/`, `layout/` y `components/`)
+- SEO on-page: `title`, `meta description` y `meta keywords` únicos por página, `alt` descriptivo en todas las imágenes
 
 ## 📁 Estructura del proyecto
 
