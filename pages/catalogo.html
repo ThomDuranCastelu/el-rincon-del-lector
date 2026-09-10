@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
@@ -76,7 +77,7 @@
         
     <h3 class="titulo-terciario">Literatura clasica</h3>
 
-    <article class="libro">
+    <article class="libro" data-aos="fade-up">
     <h3 class="titulo-terciario">Don quijote de la mancha</h3>
         <img src="../assets/libros/don_quijote_de_la_mancha.png"
             alt="Portada de Don Quijote"
@@ -85,7 +86,7 @@
         
     </article>
 
-    <article class="libro">
+    <article class="libro" data-aos="fade-up" data-aos-delay="100">
         <h3 class="titulo-terciario">Orgullo y prejuicio</h3>
             <img src="../assets/libros/orgullo_y_prejuicio.png" 
                 alt="Portada de Orgullo y Prejuicio" 
@@ -94,14 +95,14 @@
     </article>
 
 
-    <article class="libro">
+    <article class="libro" data-aos="fade-up" data-aos-delay="200">
         <h3 class="titulo-terciario">1984</h3>
             <img src="../assets/libros/1984.png"
                 alt="Portada de 1984"
                 width="150">
     </article>
 
-    <article class="libro">
+    <article class="libro" data-aos="fade-up" data-aos-delay="300">
         <h3 class="titulo-terciario">Crimen y castigo</h3>
             <img src="../assets/libros/crimen_y_castigo.png"
                 alt="Portada de Crimen y Castigo"
@@ -212,5 +213,12 @@
 
     </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 700,
+        once: true
+    });
+</script>
 </body>
 </html>

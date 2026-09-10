@@ -207,6 +207,92 @@ main p {
   grid-area: recomendado;
 }
 
+.contenido-inicio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "marketing" "productos" "frase";
+  gap: 2rem;
+}
+.contenido-inicio .marketing {
+  grid-area: marketing;
+}
+.contenido-inicio .productos-destacados {
+  grid-area: productos;
+}
+.contenido-inicio .frase-destacada {
+  grid-area: frase;
+}
+@media (min-width: 1024px) {
+  .contenido-inicio {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "marketing marketing" "productos frase";
+  }
+}
+
+.contenido-sobre {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "texto" "figura" "valores";
+  gap: 2rem;
+}
+.contenido-sobre .sobre-texto {
+  grid-area: texto;
+}
+.contenido-sobre figure {
+  grid-area: figura;
+}
+.contenido-sobre .valores {
+  grid-area: valores;
+  margin-bottom: 0;
+}
+@media (min-width: 1024px) {
+  .contenido-sobre {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "texto figura" "texto valores";
+    align-items: start;
+  }
+}
+
+.contenido-contacto {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "intro" "form";
+  gap: 2rem;
+}
+.contenido-contacto .contacto-intro {
+  grid-area: intro;
+}
+.contenido-contacto form {
+  grid-area: form;
+  margin: 0;
+}
+@media (min-width: 1024px) {
+  .contenido-contacto {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "intro form";
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenido-sobre figure {
+    display: flex;
+    gap: 1rem;
+  }
+  .contenido-sobre figure img {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.libro, .genero li {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.libro:hover, .genero li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(112, 87, 87, 0.3);
+}
+
 .lugar-destacado,
 .marketing,
 .productos-destacados,
@@ -241,7 +327,6 @@ main p {
   vertical-align: top;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .libro img {
   border-radius: 4px;
@@ -252,10 +337,6 @@ main p {
 .libro h3 {
   min-height: 3rem;
   font-size: 1rem;
-}
-.libro:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(112, 87, 87, 0.3);
 }
 
 .genero ul {
@@ -278,11 +359,6 @@ main p {
   display: flex;
   flex-direction: column;
   min-height: 3rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.genero li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(112, 87, 87, 0.3);
 }
 .genero img {
   display: block;
@@ -412,3 +488,27 @@ textarea {
   color: #705757;
   margin-top: 0.5rem;
 }/*# sourceMappingURL=main.css.map */
+
+
+// Utilities (variables, mixins y placeholders, deben ir primero)
+@use "utilities/variables" as *;
+@use "utilities/mixins" as *;
+@use "utilities/placeholders" as *;
+
+// Base (reset, tipografía, estilos globales)
+@use "base/tipografia";
+@use "base/base";
+
+// Layout (header, nav, footer, grids de página)
+@use "layout/header";
+@use "layout/nav";
+@use "layout/footer";
+@use "layout/grid";
+
+// Components (piezas reutilizables)
+@use "components/cards";
+@use "components/buttons";
+@use "components/forms";
+@use "components/carousel";
+@use "components/misc";
+@use "components/animations";

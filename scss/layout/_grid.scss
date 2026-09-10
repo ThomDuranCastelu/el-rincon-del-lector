@@ -60,3 +60,88 @@
 .seccion-destacados { grid-area: destacados; }
 .seccion-generos    { grid-area: generos; }
 .libro-recomendado  { grid-area: recomendado; }
+
+// ==========================================================================
+// GRID: INICIO (mobile-first)
+// ==========================================================================
+
+.contenido-inicio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "marketing"
+        "productos"
+        "frase";
+    gap: $espaciado-xl;
+
+    .marketing            { grid-area: marketing; }
+    .productos-destacados { grid-area: productos; }
+    .frase-destacada      { grid-area: frase; }
+
+    @include desktop {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "marketing marketing"
+            "productos frase";
+    }
+}
+
+// ==========================================================================
+// GRID: SOBRE NOSOTROS (mobile-first)
+// ==========================================================================
+
+.contenido-sobre {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "texto"
+        "figura"
+        "valores";
+    gap: $espaciado-xl;
+
+    .sobre-texto { grid-area: texto; }
+    figure       { grid-area: figura; }
+    .valores     { grid-area: valores; margin-bottom: 0; }
+
+    @include desktop {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "texto figura"
+            "texto valores";
+        align-items: start;
+    }
+}
+
+.contenido-sobre figure {
+    @include desktop {
+        display: flex;
+        gap: $espaciado-md;
+
+        img {
+            flex: 1;
+            width: 100%;
+        }
+    }
+}
+
+// ==========================================================================
+// GRID: CONTACTO (mobile-first)
+// ==========================================================================
+
+.contenido-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "intro"
+        "form";
+    gap: $espaciado-xl;
+
+    .contacto-intro { grid-area: intro; }
+    form            { grid-area: form; margin: 0; }
+
+    @include desktop {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "intro form";
+        align-items: center;
+    }
+}

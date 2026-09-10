@@ -1,0 +1,16 @@
+@use "variables" as *;
+
+// ==========================================================================
+// PLACEHOLDERS (para usar con @extend)
+// Un placeholder no genera CSS por sí solo: solo aparece cuando algo lo extiende.
+// A diferencia de un mixin, @extend AGRUPA selectores en vez de duplicar código.
+// ==========================================================================
+
+%hover-elevar {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 10px rgba($color-primario, 0.3);
+    }
+}

@@ -38,3 +38,14 @@
         @content;
     }
 }
+
+// Animación local con parámetros (nombre del @keyframes, duración, delay y easing)
+// Uso: @include animar(fadeInUp); / @include animar(float, 3s, 0s, ease-in-out, infinite);
+@mixin animar($nombre, $duracion: 0.6s, $delay: 0s, $easing: ease, $repeticion: 1) {
+    animation-name: $nombre;
+    animation-duration: $duracion;
+    animation-delay: $delay;
+    animation-timing-function: $easing;
+    animation-iteration-count: $repeticion;
+    animation-fill-mode: both;
+}

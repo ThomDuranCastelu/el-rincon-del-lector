@@ -18,7 +18,8 @@ Sitio web de una librería, desarrollado como proyecto integrador del curso de P
 ## 🛠️ Tecnologías
 
 - HTML5 semántico
-- CSS3 (variables, Flexbox, Grid, media queries)
+- SCSS (variables, mixins, nesting, partials) compilado a CSS
+- CSS3 (Flexbox, Grid, media queries)
 - [Bootstrap 5](https://getbootstrap.com/) (navbar responsiva y carousel)
 - Google Fonts (Lobster Two + Lora)
 
@@ -30,6 +31,7 @@ Sitio web de una librería, desarrollado como proyecto integrador del curso de P
 - Layout con CSS Grid (`grid-template-areas`) en las secciones principales
 - Estados interactivos (`:hover`, `:focus`, `:active`) en links, botones y tarjetas
 - Paleta de colores y tipografía propias, aplicadas sobre los componentes de Bootstrap
+- Arquitectura SCSS modular (variables, mixins y partials organizados por `base/`, `layout/` y `components/`)
 
 ## 📁 Estructura del proyecto
 
@@ -41,8 +43,27 @@ el-rincon-del-lector/
 │   ├── sobre-nosotros.html
 │   ├── catalogo.html
 │   └── contacto.html
+├── scss/
+│   ├── main.scss          # único punto de entrada (@use)
+│   ├── utilities/
+│   │   ├── _variables.scss
+│   │   └── _mixins.scss
+│   ├── base/
+│   │   ├── _tipografia.scss
+│   │   └── _base.scss
+│   ├── layout/
+│   │   ├── _header.scss
+│   │   ├── _nav.scss
+│   │   ├── _footer.scss
+│   │   └── _grid.scss
+│   └── components/
+│       ├── _cards.scss
+│       ├── _buttons.scss
+│       ├── _forms.scss
+│       ├── _carousel.scss
+│       └── _misc.scss
 ├── styles/
-│   └── styles.css
+│   └── main.css            # generado por la compilación de SCSS
 └── assets/
     ├── libros/
     └── (logo e imágenes generales)

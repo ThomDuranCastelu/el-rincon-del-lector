@@ -2,9 +2,10 @@
 // MAIN.SCSS — único punto de entrada de la compilación
 // ==========================================================================
 
-// Utilities (variables y mixins, deben ir primero)
+// Utilities (variables, mixins y placeholders, deben ir primero)
 @use "utilities/variables" as *;
 @use "utilities/mixins" as *;
+@use "utilities/placeholders" as *;
 
 // Base (reset, tipografía, estilos globales)
 @use "base/tipografia";
@@ -22,3 +23,4 @@
 @use "components/forms";
 @use "components/carousel";
 @use "components/misc";
+@use "components/animations";

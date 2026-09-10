@@ -1,0 +1,44 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ==========================================================================
+// KEYFRAMES
+// ==========================================================================
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+// ==========================================================================
+// APLICACIÓN DE LAS ANIMACIONES
+// ==========================================================================
+
+// El título principal aparece con un pequeño desplazamiento al cargar la página
+.titulo-principal {
+    @include animar(fadeInUp, 0.7s);
+}
+
+.eslogan {
+    @include animar(fadeInUp, 0.7s, 0.15s);
+}
+
+// El logo "flota" suavemente todo el tiempo (loop infinito)
+.logo {
+    @include animar(float, 3s, 0s, ease-in-out, infinite);
+}

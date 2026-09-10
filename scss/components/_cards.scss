@@ -1,5 +1,6 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
+@use "../utilities/placeholders" as *;
 
 // ==========================================================================
 // TARJETAS "CONTENEDOR" (mismo estilo de card blanca en 5 secciones distintas)
@@ -33,12 +34,12 @@
 
 .libro {
     @include tarjeta($espaciado-md);
+    @extend %hover-elevar;
     width: 160px;
     text-align: center;
     vertical-align: top;
     display: flex;
     flex-direction: column;
-    @include transicion(transform, box-shadow);
 
     img {
         border-radius: 4px;
@@ -50,11 +51,6 @@
     h3 {
         min-height: 3rem;
         font-size: 1rem;
-    }
-
-    &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 4px 10px rgba($color-primario, 0.3);
     }
 }
 
@@ -71,18 +67,13 @@
 
     li {
         @include tarjeta($espaciado-md);
+        @extend %hover-elevar;
         width: 160px;
         text-align: center;
         vertical-align: top;
         display: flex;
         flex-direction: column;
         min-height: 3rem;
-        @include transicion(transform, box-shadow);
-
-        &:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 10px rgba($color-primario, 0.3);
-        }
     }
 
     img {
