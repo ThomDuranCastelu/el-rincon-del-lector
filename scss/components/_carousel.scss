@@ -11,9 +11,10 @@
     border: 1px solid $color-acento;
 
     .carousel-item img {
-        height: 350px;
-        object-fit: cover;
-    }
+        height: 400px;
+        object-fit: contain;
+        background-color: $color-primario;
+}
 
     .carousel-control-prev-icon,
     .carousel-control-next-icon {

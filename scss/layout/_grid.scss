@@ -46,13 +46,14 @@
     gap: $espaciado-xl;
 
     @include desktop {
-        grid-template-columns: 2fr 1fr;
-        grid-template-areas:
-            "titulo     titulo"
-            "galeria    galeria"
-            "destacados recomendado"
-            "generos    recomendado";
-    }
+    grid-template-columns: 3fr 1fr;   
+    grid-template-areas:
+        "titulo     titulo"
+        "galeria    galeria"
+        "destacados recomendado"
+        "generos    recomendado";
+    align-items: start;   
+}
 }
 
 .catalogo-intro     { grid-area: titulo; }

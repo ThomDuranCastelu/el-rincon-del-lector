@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+.libro, .genero li {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.libro:hover, .genero li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(112, 87, 87, 0.3);
+}
+
 .titulo-principal {
   font-family: "Lobster Two", sans-serif;
   color: #705757;
@@ -182,8 +190,9 @@ main p {
 }
 @media (min-width: 1024px) {
   .contenido-catalogo {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-areas: "titulo     titulo" "galeria    galeria" "destacados recomendado" "generos    recomendado";
+    align-items: start;
   }
 }
 
@@ -253,6 +262,17 @@ main p {
   }
 }
 
+@media (min-width: 1024px) {
+  .contenido-sobre figure {
+    display: flex;
+    gap: 1rem;
+  }
+  .contenido-sobre figure img {
+    flex: 1;
+    width: 100%;
+  }
+}
+
 .contenido-contacto {
   display: grid;
   grid-template-columns: 1fr;
@@ -272,25 +292,6 @@ main p {
     grid-template-areas: "intro form";
     align-items: center;
   }
-}
-
-@media (min-width: 1024px) {
-  .contenido-sobre figure {
-    display: flex;
-    gap: 1rem;
-  }
-  .contenido-sobre figure img {
-    flex: 1;
-    width: 100%;
-  }
-}
-
-.libro, .genero li {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.libro:hover, .genero li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(112, 87, 87, 0.3);
 }
 
 .lugar-destacado,
@@ -434,9 +435,10 @@ textarea {
   border: 1px solid #B5651D;
 }
 .carousel-custom .carousel-item img {
-  height: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #705757;
 }
 .carousel-custom .carousel-control-prev-icon,
 .carousel-custom .carousel-control-next-icon {
@@ -488,3 +490,48 @@ textarea {
   color: #705757;
   margin-top: 0.5rem;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.titulo-principal {
+  animation-name: fadeInUp;
+  animation-duration: 0.7s;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.eslogan {
+  animation-name: fadeInUp;
+  animation-duration: 0.7s;
+  animation-delay: 0.15s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.logo {
+  animation-name: float;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}/*# sourceMappingURL=main.css.map */
